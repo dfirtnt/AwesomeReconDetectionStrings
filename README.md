@@ -52,7 +52,7 @@ wusa.exe
 
 //----------SPLUNK VERSION-With Freqency of Occurence---------//
 
-sourcetype="WinEventLog:Security" index=coe_* EventCode=4688 Creator_Process_Name="C:\\Windows\\System32\\cmd.exe"
+sourcetype="WinEventLog:Security" EventCode=4688 Creator_Process_Name="C:\\Windows\\System32\\cmd.exe"
 New_Process_Name="C:\\*\\arp.exe" OR
 New_Process_Name="C:\\*\\at.exe" OR
 New_Process_Name="C:\\*\\ceipdata.exe" OR
