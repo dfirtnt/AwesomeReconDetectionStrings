@@ -56,7 +56,7 @@ ntdsutil.exe
 qwinsta.exe
 nps.exe
 
-//----------SPLUNK VERSION-With Freqency of Occurence---------//
+//----------SPLUNK VERSION-With Freqency of Occurence Filter---------//
 
 sourcetype="WinEventLog:Security" EventCode=4688 Creator_Process_Name="C:\\Windows\\System32\\cmd.exe"
 New_Process_Name="C:\\*\\arp.exe" OR
