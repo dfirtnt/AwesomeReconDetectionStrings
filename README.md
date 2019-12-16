@@ -49,6 +49,12 @@ whoami.exe
 WinrsHost.exe
 wsmprovhost.exe
 wusa.exe
+hh.exe
+Regsrv32.exe
+Msxsl.exe
+ntdsutil.exe
+qwinsta.exe
+nps.exe
 
 //----------SPLUNK VERSION-With Freqency of Occurence---------//
 
@@ -100,8 +106,12 @@ New_Process_Name="C:\\*\\wevtutil.exe" OR
 New_Process_Name="C:\\*\\wget.exe" OR
 New_Process_Name="C:\\*\\whoami.exe" OR
 New_Process_Name="C:\\*\\WinrsHost.exe" OR
-New_Process_Name="C:\\*\\wusa.exe"
+New_Process_Name="C:\\*\\wusa.exe" OR
+New_Process_Name="C:\\*\\hh.exe" OR
+New_Process_Name="C:\\*\\Regsrv32.exe" OR
+New_Process_Name="C:\\*\\Msxsl.exe" OR
+New_Process_Name="C:\\*\\ntdsutil.exe" OR
+New_Process_Name="C:\\*\\qwinsta.exe" OR
+New_Process_Name="C:\\*\\nps.exe"
 
 |STATS dc(New_Process_Name)  as uProc values(New_Process_Name) as ProcName values(Process_Command_Line) as CmdLine count by host | SEARCH uProc>3
-
-
