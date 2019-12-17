@@ -115,3 +115,7 @@ New_Process_Name="C:\\*\\qwinsta.exe" OR
 New_Process_Name="C:\\*\\nps.exe"
 
 |STATS dc(New_Process_Name)  as uProc values(New_Process_Name) as ProcName values(Process_Command_Line) as CmdLine count by host | SEARCH uProc>3
+
+
+----TODO----
+eventvwr.exe
